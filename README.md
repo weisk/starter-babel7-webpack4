@@ -3,10 +3,10 @@
 based on https://github.com/blacksonic/webpack-showcase
 
 ```
-npm install
+yarn
 
-npm start // run development server
-npm test // run tests
-npm run build // generate production output ready for deployment
-npm run deploy // deploy to Github Pages
+yarn start // run development server
+yarn test // run tests
+yarn build // generate production output ready for deployment
+yarn deploy // deploy to Github Pages
 ```
