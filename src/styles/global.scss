@@ -1,0 +1,21 @@
+@import "mediaQueries";
+@import "common";
+@import "variables";
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  @extend .row;
+}
+
+#root {
+  @extend .row;
+  @extend .flex;
+}
+
+#app {
+  @extend .flex;
+}

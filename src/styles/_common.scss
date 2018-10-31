@@ -1,0 +1,28 @@
+.flex { flex: 1; }
+.row { display: flex; flex-direction: row; }
+.col { display: flex; flex-direction: column; }
+
+.what { background-color: #CCC; }
+.bold { font-weight: bold; }
+.hide { display: none !important; }
+.invisible { visibility: none !important; }
+
+// spacers
+$spacers: ("xs": 5px, "s": 10px, "m": 20px, "l": 40px, "xl": 80px);
+@each $key, $val in $spacers {
+  .spacer-vertical-#{$key} { height: $val; }
+  .spacer-horizontal-#{$key} { width: $val; }
+}
+
+// media queries
+.show-tablet { display: none;}
+.show-phone { display: none;}
+@include for-tablet-portrait-only {
+  .hide-tablet { display: none !important; }
+  .show-tablet { display: block !important; }
+}
+@include for-phone-only {
+  .hide-phone { display: none !important; }
+  .show-phone { display: block !important; }
+}
+

@@ -1,3 +1,7 @@
-import { ConsoleDisplay } from './lib/display';
+import { createEl } from 'lib/DOM';
+import App from 'containers/App'
+import 'styles/global.scss';
 
-new ConsoleDisplay().display();
+const myApp = new App();
+myApp.init();
+

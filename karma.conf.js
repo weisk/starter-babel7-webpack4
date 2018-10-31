@@ -12,10 +12,23 @@ module.exports = (config) => {
       'src/test.js': ['webpack']
     },
 
-    webpack: require('./webpack.config'),
+    webpack: {
+      mode: 'development'
+    },
 
     reporters: ['dots'],
 
-    browsers: ['ChromeHeadless']
+    browsers: ['ChromiumHeadless'],
+    customLaunchers: {
+      "ChromiumHeadless": {
+        base: "Chromium",
+        flags: [
+          "--headless",
+          " --remote-debugging-port=9222",
+          // https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
+          "--disable-gpu",
+        ],
+      },
+    }
   });
 };
